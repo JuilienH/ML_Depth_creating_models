@@ -49,7 +49,7 @@ lr.fit(X, y)
 X_new = np.array([[6, 7], [7, 8]])
 y_pred = lr.predict(X_new)
 
-print(y_pred,lr.weights,lr.bias)  # [1, 1]
+print(y_pred,lr.weights,lr.bias) 
 
         
 
