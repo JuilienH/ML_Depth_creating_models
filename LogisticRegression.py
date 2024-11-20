@@ -16,14 +16,14 @@ class LogisticRegression:
         self.bias = 0
         for i in range(self.n_iters):
             # predicted values should be either 0 or 1, following sigmoid function the formula provided 
-            z=np.dot(X,self.weights)+self.bias  # the fornula weights*inputs+bias
+            z=np.dot(X,self.weights)+self.bias  # the formula inputs*weights+bias; like 5*2 ** 2*1  ==5*1  5 obs, 5 predicted values
             y_pred=1/(1+np.exp(-z)) # feed the calculated probabilities in sigmoid function
 
             # the log loss function provided for logistic regression:
             #loss = (-1 / samples) * np.sum(y * np.log(y_pred) + (1 - y) * np.log(1 - y_pred))
             # calculate gradients provided for weights and bias
-            dw = (1 / samples) * np.dot(X.T, (y_pred - y)) # this is tricky to remember each row contains multiple features, but Transpose group  all rows byx1, x2,
-            db = (1 / samples) * np.sum(y_pred - y)
+            dw = (1 / samples) * np.dot(X.T, (y_pred - y)) # like 5*2 --->2*5 **5*1 ==2*1 weights for 2 features
+            db = (1 / samples) * np.sum(y_pred - y) 
 
             # penalize weights and bias learning rate* gradients
             self.weights -=self.learning_rate*dw
