@@ -17,7 +17,7 @@ class MultipleLinearRegression:
             for i in range(obs):  #row
                 numerator=0
                 denominator=0
-                numerator += (X[i][j] - X_mean[j])*(Y[i] - Y_mean) # 7*2 --> 2*7 ** 7*1 ==2*1
+                numerator += (X[i][j] - X_mean[j])*(Y[i] - Y_mean) 
                 denominator += ((X[i][j] - X_mean[j])*(X[i][j] - X_mean[j]))
                 ratio=numerator/denominator
             Result.append(ratio)
