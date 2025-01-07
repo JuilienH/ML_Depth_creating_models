@@ -1,6 +1,6 @@
 import numpy as np
 
-class LinearRegression:
+class MultipleLinearRegression:
     def __init__(self): #I would need intercept and slopes(coefficients, weights)
         self.intercept=None 
         self.slopes=None
@@ -11,8 +11,7 @@ class LinearRegression:
         Y_mean=np.mean(Y)
         Result=[]    
         # initiate the numbers as zeros before adding in the loop
-        self.slopes=np.zeros(features)#how many heatures, how many slopes
-        #if a file load, can I use df.shape in ()?   
+        self.slopes=np.zeros(features)#how many heatures, how many slopes  
         for j in range(features): #col
             
             for i in range(obs):  #row
@@ -32,7 +31,7 @@ class LinearRegression:
             y_pred=self.intercept+X*self.slopes # 4*2 2*1
             return y_pred
     
-model=LinearRegression()
+model=MultipleLinearRegression()
 model.fit(X,Y)
 
 print(model.predict(INP))
