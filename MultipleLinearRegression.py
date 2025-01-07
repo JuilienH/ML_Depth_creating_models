@@ -28,7 +28,7 @@ class MultipleLinearRegression:
     
     def predict(self,X):    
    
-            y_pred=self.intercept+X*self.slopes # 4*2 2*1
+            y_pred=self.intercept+X*self.slopes # if you have four new obs, then the dimensions for X: 4*2 ** the slopes 2*1
             return y_pred
     
 model=MultipleLinearRegression()
