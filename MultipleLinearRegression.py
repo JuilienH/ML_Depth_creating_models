@@ -11,7 +11,7 @@ class MultipleLinearRegression:
         Y_mean=np.mean(Y)
         Result=[]    
         # initiate the numbers as zeros before adding in the loop
-        self.slopes=np.zeros(features)#how many heatures, how many slopes  
+        self.slopes=np.zeros(features)#how many features, how many slopes  
         for j in range(features): #col
             
             for i in range(obs):  #row
